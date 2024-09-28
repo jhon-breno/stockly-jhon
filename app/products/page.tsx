@@ -26,11 +26,3 @@ const ProductPage = async () => {
 };
 
 export default ProductPage;
-
-{
-  /* <div>
-      {products.map((product) => (
-        <p key={product.id}>{product.name}</p>
-      ))}
-    </div> */
-}
