@@ -1,7 +1,7 @@
 import { DataTable } from "../_components/ui/data-table";
 import { productsTableColumns } from "./_components/table-columns";
 import { caschedGetProducts } from "../_data-acess/product/get-product";
-import AddProductButton from "./_components/add-product-button";
+import CreateProductButton from "./_components/create-product-button";
 
 export const dynamic = "force-dynamic";
 
@@ -16,7 +16,7 @@ const ProductPage = async () => {
           </span>
           <h2 className="text-xl font-semibold">Produtos</h2>
         </div>
-        <AddProductButton />
+        <CreateProductButton />
       </div>
       <DataTable columns={productsTableColumns} data={products} />
     </div>
