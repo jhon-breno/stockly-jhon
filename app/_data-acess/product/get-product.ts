@@ -1,8 +1,12 @@
-import "server-only"
+import "server-only";
 
-import { db } from "@/app/_lib/prisma"
+import { db } from "@/app/_lib/prisma";
 import { Product } from "@prisma/client";
+import { cache } from "react";
 
 export const getProducts = async (): Promise<Product[]> => {
-    return db.product.findMany({});
-}
+  console.log("Feyching products...");
+  return db.product.findMany({});
+};
+
+export const caschedGetProducts = cache(getProducts);
